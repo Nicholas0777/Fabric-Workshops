@@ -1,0 +1,44 @@
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+# Dataflow Gen2 : Présentation
+
+
+## Différence entre Dataflow, notebook et pipelines
+Le pipeline se distingue des autres items de transformations sur plusieurs aspects :
+- Rapidité de copie des données (sans transformations complexes)
+- Hérités de Azure Data Factory et présents dans Azure Synapse (une maturité certaine)
+- Une interface allégée et orientée low code
+- Une capacité de planification des actions avancée (simple ou complexe sur des évènements)
+- Une supervision graphique avancée etb une intégration parfaite dans Fabric
+
+
+## Notions à avoir
+Si vous êtes déjà familier avec l'utilisation de pipelines sous Azure, les pipelines de MS Fabric devraient être faciles à appréhender.
+- Utilisation de Pipelines de données idnetiques (avec quelques fonctions supplémentaires et une notion de connecteurs aux données)
+
+# 1. [Pratique] Configurations du pipeline
+## 1.1. Créer un pipeline dans Fabric
+1. Ouvrir votre workspace 
+2. Si vous n'y êtes pas déjà, sélectionner dans l'expérience **Data Engineering**
+3. Aller dans **New** > **Pipeline**. Après quelques secondes, vous serez sur l'interface ci-dessous.<br>
+    <img src="https://github.com/Nicholas0777/Fabric-Workshops/blob/main/Module%20Complete%20Data%20Pipeline/images/Dataflow-Gen2/Dataflow-gen2-create-a-dataflow-gen2.png" alt="" width="100%"/> <br><br>
+
+## 1.2. Ajouter une activité de copie au pipeline entre le Lakehouse Bronze et le Lakehouse Silver
+    
+<img src="https://github.com/Nicholas0777/Fabric-Workshops/blob/main/Module%20Complete%20Data%20Pipeline/images/Dataflow-Gen2/Dataflow-Gen2-Load-data-from-Lakehouse.gif" alt="" width="80%"/> <br>
+
+1. Aller dans ajout d'activités
+2. La nouvelle fenêtre qui s'ouvre propose de sélectionner une nouvelle activité de copie
+3. Appuyer sur **Next** 
+4. A présent, chercher le workspace dans lequel se trouve le Lakehouse à connecter.<br>
+    Déplier en cliquant sur **&#9655;** à côté du nom de votre workspace puis sur **&#9655;** à côté du nom de votre Lakehouse Bronze (Ici **DE_LH_Bronze**).
+    Sélectionner le dossier **File** puis cliquer sur **Create**<br>
+    <img src="https://github.com/Nicholas0777/Fabric-Workshops/blob/main/Module%20Complete%20Data%20Pipeline/images/Dataflow-Gen2/Dataflow-gen2-Select-Lakehouse-Files-Folder.png" alt="" width="70%"/> <br><br>
+5. Après quelques secondes, vous obtiendrez ce résultat :
+    <img src="https://github.com/Nicholas0777/Fabric-Workshops/blob/main/Module%20Complete%20Data%20Pipeline/images/Dataflow-Gen2/Dataflow-gen2-Interface-Components.png" alt="" width="70%"/> <br>
+    
+
+# 2. Aperçu général de l’interface de MS Fabric Pipelines
+
+<img src="https://github.com/Nicholas0777/Fabric-Workshops/blob/main/Module%20Complete%20Data%20Pipeline/images/Dataflow-Gen2/Dataflow-gen2-Interface-Components.png" alt="" width="95%"/> <br>
+
